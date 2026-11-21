@@ -1,0 +1,18 @@
+{
+  "name": "Cricket Live TV",
+  "short_name": "Cricket TV",
+  "description": "Simple live cricket channels player",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1099/1099672.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

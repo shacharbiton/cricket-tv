@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Cricket Live TV</title>
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Cricket Live TV</h1>
+    <div class="header-actions">
+      <button id="refresh-btn" type="button" class="btn-ghost">Refresh Channels</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="player-card">
+      <div class="video-box">
+        <video id="player" controls playsinline></video>
+        <div id="fallback-banner" class="fallback-banner hidden">
+          <p id="fallback-text">This channel is currently unavailable.</p>
+          <button id="next-working-btn" type="button" class="btn-primary">Try Next Channel</button>
+        </div>
+      </div>
+
+      <div class="now-bar">
+        <div id="now-title" class="now-title">Loading cricket channels...</div>
+        <div id="now-status" class="now-status">Starting up</div>
+      </div>
+
+      <div class="remote-bar" aria-label="TV Remote Controls">
+        <button id="prev-btn" type="button" class="remote-btn">⏮ Previous</button>
+        <button id="play-pause-btn" type="button" class="remote-btn primary">⏯ Play / Pause</button>
+        <button id="mute-btn" type="button" class="remote-btn">🔇 Mute</button>
+        <button id="fullscreen-btn" type="button" class="remote-btn">⛶ Full Screen</button>
+        <button id="next-btn" type="button" class="remote-btn">⏭ Next</button>
+      </div>
+    </section>
+
+    <section class="channels-section">
+      <h2>Cricket Channels</h2>
+      <div id="channels-grid" class="channels-grid"></div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
